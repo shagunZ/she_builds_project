@@ -10,7 +10,7 @@ import store from "./store";
 
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
-
+import Chat from './components/Chat';
 import "./App.css";
 
 if (localStorage.token) {
@@ -22,7 +22,8 @@ const App = () => {
     store.dispatch(loadUser());
   }, []);
   return (
-    <Provider store={store}>
+  
+    <><Provider store={store}>
       <Router>
         <Fragment>
           <Navbar />
@@ -32,7 +33,7 @@ const App = () => {
           </Switch>
         </Fragment>
       </Router>
-    </Provider>
+    </Provider><Chat /></>
   );
 };
 
