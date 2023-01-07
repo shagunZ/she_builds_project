@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link,Routes,Route,Navigate } from "react-router-dom";
 
 // redux
 import { connect } from "react-redux";
@@ -10,11 +10,21 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to="/profiles">Developers</Link>
+        <Link to="/profiles">Investor's</Link>
+      </li>
+      <li>
+        {/* <Link to="http://localhost:3000/signup">Jobs&Updates</Link>
+         */}
+         <Link to={{ pathname: "http://localhost:3000/signup" }} target="_blank" >Jobs&Updates</Link>
+{/* <Route path='/privacy-policy' component={() => {
+    window.location.href = 'https://example.com/1234';
+    return null;
+}}/> */}
+
       </li>
       <li>
         <Link to="/posts">Posts</Link>
-      </li>
+       </li>
       <li>
         <Link to="/dashboard">
           <i className="fas fa-user" />{" "}

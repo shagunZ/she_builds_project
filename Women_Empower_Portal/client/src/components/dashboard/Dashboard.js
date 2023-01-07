@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from "react";
+// import {Avatar,Card,CardHeader,CardContent,CardMedia,Typography} from '@mui/material'
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Spinner from "../layout/Spinner";
@@ -25,8 +26,9 @@ const Dashboard = ({
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className="large text-primary">Dashboard</h1>
-      <p className="lead">
+      {/* <button type="button" class="btn btn-primary btn-rounded">{profile.name ? profile.name.charAt(0):""}</button> */}
+      <h1 className="large text-primary text-center">Dashboard</h1>
+      <p className="lead text-center">
         <i className="fas fa-user"></i> Welcome {user && user.name}
       </p>
       {profile !== null ? (
@@ -43,7 +45,7 @@ const Dashboard = ({
       ) : (
         <Fragment>
           <p>You have not yet setup a profile, please add some info</p>
-          <Link to="/create-profile" className="btn btn-primary my-1">
+          <Link to="/create-profile" className="btn btn-primary my-1 text-center">
             Create Profile
           </Link>
         </Fragment>
