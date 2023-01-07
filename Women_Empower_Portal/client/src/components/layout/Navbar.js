@@ -16,6 +16,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         {/* <Link to="http://localhost:3000/signup">Jobs&Updates</Link>
          */}
          <Link to={{ pathname: "http://localhost:3000/signup" }} target="_blank" >Jobs&Updates</Link>
+
+         
 {/* <Route path='/privacy-policy' component={() => {
     window.location.href = 'https://example.com/1234';
     return null;
