@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Grid, makeStyles } from "@material-ui/core";
-
+import Chat from './component/Chat'
 import Welcome, { ErrorPage } from "./component/Welcome";
 import Navbar from "./component/Navbar";
 import Login from "./component/Login";
@@ -104,6 +104,7 @@ function App() {
           message={popup.message}
         />
       </SetPopupContext.Provider>
+      <Chat />
     </BrowserRouter>
   );
 }
